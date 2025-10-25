@@ -26,30 +26,3 @@ RESTful-сервис на FastAPI для управления коллекцие
 * Alembic 1.16+  
 * Uvicorn  
 * pytest + httpx (для тестов)  
-
-Итоговая структура проекта
---------------------------
-movies_api/
-├── alembic/                     # миграции
-│   ├── versions/
-│   └── env.py
-├── src/
-│   ├── init.py
-│   ├── main.py                  # точка входа FastAPI
-│   ├── database.py              # AsyncEngine & SessionLocal
-│   ├── models/
-│   │   ├── init.py
-│   │   └── movie.py             # SQLAlchemy-ORM модель
-│   ├── routers/
-│   │   └── movies.py            # эндпоинты
-│   ├── repositories/
-│   │   └── movies.py            # бизнес-логика + запросы к БД
-│   └── schemas/
-│       ├── init.py
-│       └── movie.py             # Pydantic-схемы
-├── tests/
-│   ├── conftest.py              # pytest-фикстуры
-│   └── test_movies.py           # тесты
-├── alembic.ini
-├── requirements.txt
-└── README.md
